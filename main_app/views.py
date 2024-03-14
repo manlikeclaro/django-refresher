@@ -71,3 +71,15 @@ def home(request):
     }
 
     return render(request, template_name="index.html", context=data)
+
+
+def item(request):
+    return render(request, 'inner-page.html')
+
+
+def portfolio(request):
+    return render(request, 'portfolio-details.html')
+
+
+def alt_home(request):
+    return render(request, 'untouched_index.html')

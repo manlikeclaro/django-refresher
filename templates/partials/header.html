@@ -1,0 +1,27 @@
+{% load static %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+        <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Politrack Africa<span>.</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="{% url 'home' %}" class="logo me-auto me-lg-0">
+            <img src="{% static 'main_app/img/politrack.png' %}" alt="" class="img-fluid">
+        </a>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+                <li><a class="nav-link scrollto" href="#features">Our Services</a></li>
+                <li><a class="nav-link scrollto" href="#services">Live Reports</a></li>
+                <li><a class="nav-link scrollto " href="#portfolio">Media</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
