@@ -24,5 +24,6 @@ urlpatterns = [
     path('alt-home', views.alt_home, name='alt_home'),
     path('item', views.item, name='item'),
     path('portfolio', views.portfolio, name='portfolio'),
+    path('form', views.form, name='form'),
     path('admin/', admin.site.urls),
 ]

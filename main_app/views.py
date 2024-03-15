@@ -1,6 +1,8 @@
 import datetime
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from main_app.app_forms import ReportForm
 
 
 # Create your views here.
@@ -83,3 +85,15 @@ def portfolio(request):
 
 def alt_home(request):
     return render(request, 'untouched_index.html')
+
+
+def form(request):
+    if request.method == 'POST':
+        my_form = ReportForm(request.POST)
+        if my_form.is_valid():
+            my_form.save()
+            return redirect('alt_home')
+
+    my_form = ReportForm()
+
+    return render(request, 'form.html', {'form': my_form})
